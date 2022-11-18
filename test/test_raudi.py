@@ -7,7 +7,6 @@ from helper import *
 from manager import Manager
 # Import for specific tools
 from test.tools.raudi import config as raudi
-from test.tools.dsp import config as dsp
 
 
 # Values

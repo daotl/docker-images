@@ -4,6 +4,9 @@ name: RAUDI
 
 # Controls when the workflow will run
 on:
+  push:
+    branches: ['main']
+
   # Run every night at midnight
   schedule:
     - cron: "0 0 * * *"

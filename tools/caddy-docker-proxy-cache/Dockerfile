@@ -7,6 +7,7 @@ RUN xcaddy build \
 
 FROM caddy:${CADDY_VERSION}-alpine
 
-COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+COPY --from=builder --link /usr/bin/caddy /usr/bin/caddy
+COPY --link Caddyfile /etc/caddy/Caddyfile
 
 CMD ["caddy", "docker-proxy"]
